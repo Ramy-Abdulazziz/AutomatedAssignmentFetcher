@@ -233,7 +233,7 @@ if __name__ == "__main__":
     for key in urls:
 
         get_assignments(shared_dict, urls[key])
-    #     p = Process(target=get_assignments, args=(shared_dict, urls[key]))
-    #     p.start()
+        p = Process(target=get_assignments, args=(shared_dict, urls[key]))
+        p.start()
 
-    # p.join()
+    p.join()
